@@ -27,7 +27,7 @@ SECRET_KEY = 'm1lm2%hb6gkqy7isdzkjol^i_!j1+w9c%*4cj!))rf=_-ax8tr'
 DEBUG = False
 
 # ALLOWED_HOSTS = ['https://loannotloanapp.herokuapp.com','127.0.0.1']
-ALLOWED_HOSTS = ['.loannotloanapp.com','loannotloanapp.herokuapp.com']
+ALLOWED_HOSTS = ['.loannotloanapp.com','loannotloanapp.herokuapp.com','.loannotloanapp.com/result/','loannotloanapp.herokuapp.com/result/']
 # Application definition
 
 INSTALLED_APPS = [
