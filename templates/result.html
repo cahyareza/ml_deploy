@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<a href="http://127.0.0.1:8000"><button>Try Again</button></a>
+<h1>Result</h1>
+
+{% if result == 0 %}
+    Your loan proposal is denied
+{% else %}
+    Your loan proposal is approved
+{% endif %}
+
+{% endblock %}
