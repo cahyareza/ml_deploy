@@ -6,6 +6,9 @@ import numpy as np
 from estimate import build_model
 from sklearn import *
 
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
+BASE_DIR = Path(__file__).resolve().parent.parent
+
 cols = ['Gender', 'Married', 'Dependents',
         'Education', 'Self_Employed', 'ApplicantIncome',
         'CoapplicantIncome', 'LoanAmount', 'Loan_Amount_Term',
@@ -37,7 +40,7 @@ def result(request):
         df = build_model.ins_null(df)
         #df = build_model.encode(df)
 
-        with open('/Users/apple/Documents/course_DPHi_DataScience_Bootcamp_Advance/assignment_3/clf_model.pkl', 'rb') as file:
+        with open(BASE_DIR /'clf_model.pkl', 'rb') as file:
             model = pickle.load(file)
 
         result = model.predict(df)[0]
