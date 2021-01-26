@@ -27,7 +27,7 @@ SECRET_KEY = 'm1lm2%hb6gkqy7isdzkjol^i_!j1+w9c%*4cj!))rf=_-ax8tr'
 DEBUG = False
 
 # ALLOWED_HOSTS = ['https://loannotloanapp.herokuapp.com','127.0.0.1']
-ALLOWED_HOSTS = ['.loannotloanapp.com','loannotloanapp.herokuapp.com','.loannotloanapp.com/result/','loannotloanapp.herokuapp.com/result/']
+ALLOWED_HOSTS = ['.loannotloanapp.com','loannotloanapp.herokuapp.com','127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
@@ -133,19 +133,3 @@ STATICFILES_DIRS = [
 ]
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
-
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-        'console': {
-            'class': 'logging.StreamHandler',
-        },
-    },
-    'loggers': {
-        'django': {
-            'handlers': ['console'],
-             'level': os.getenv('DJANGO_LOG_LEVEL', 'DEBUG'),
-        },
-    },
-}
